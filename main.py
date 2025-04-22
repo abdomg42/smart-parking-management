@@ -63,8 +63,6 @@ def update_frame():
     with open("status.json", "w") as f:
         json.dump(status, f)
     print("Updated:", status)
-    time.sleep(2)
-
     for box in car_boxes:
         x1, y1, x2, y2 = map(int, box)
         cv2.rectangle(frame_resized, (x1, y1), (x2, y2), (0, 255, 0), 2)
